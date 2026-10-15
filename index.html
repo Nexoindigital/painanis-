@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Painanis Oaxaca · Club de Atletismo</title>
+<meta name="description" content="Club de atletismo en Oaxaca desde 2014. Entrenamiento de pista, ruta y triatlón para niños, jóvenes y adultos con el ex seleccionado nacional Josafat González.">
+<meta property="og:title" content="Painanis Oaxaca · Club de Atletismo">
+<meta property="og:description" content="Formación y desarrollo atlético en Oaxaca desde 2014.">
+<meta property="og:image" content="img/hero.jpg">
+<meta property="og:locale" content="es_MX">
+<meta name="theme-color" content="#0B0F0B">
+<link rel="icon" href="img/logo-painanis.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SportsClub","name":"Club de Atletismo Painanis Oaxaca","sport":"Atletismo","foundingDate":"2014","address":{"@type":"PostalAddress","addressLocality":"Oaxaca de Juárez","addressRegion":"Oaxaca","addressCountry":"MX"},"telephone":"+52 951 304 1535","email":"josafatgm08@hotmail.com","sameAs":["https://www.facebook.com/PainanisOaxaca/","https://www.instagram.com/atletismo_painanis_oax_/"]}
+</script>
+<style>
+/* Concepto: pista de atletismo de noche + greca oaxaqueña. Verde Painanis sobre negro. */
+:root{
+  --ink:#0B0F0B; --ink-2:#121812; --ink-3:#1B231B; --line:rgba(152,232,112,.18);
+  --green:#98E870; --green-2:#5FBF4A; --green-deep:#2F8A3C;
+  --paper:#F3F6EF; --white:#FFFFFF; --muted:#A9B3A6; --muted-2:#6F7A6C;
+  --display:'Barlow Condensed','Arial Narrow',Impact,sans-serif;
+  --body:'Barlow',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --r:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--ink);color:var(--white);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.95;letter-spacing:.01em;text-transform:uppercase;text-wrap:balance}
+.eyebrow{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.22em;text-transform:uppercase;color:var(--green)}
+.g{color:var(--green)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:19px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:15px 26px;border-radius:999px;border:2px solid var(--green);transition:transform .15s,background .15s,color .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.solid{background:var(--green);color:#0B160B}
+.btn.solid:hover{background:#B4F294}
+.btn.ghost{color:var(--white);border-color:rgba(255,255,255,.35)}
+.btn.ghost:hover{border-color:var(--green);color:var(--green)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* greca oaxaqueña (patrón escalonado) */
+.greca{height:22px;background-color:var(--ink);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='22' viewBox='0 0 44 22'%3E%3Cpath d='M0 20 H10 V6 H26 V14 H18 V10 H14 V20 H30 V2 H6' fill='none' stroke='%2398E870' stroke-width='2.2' stroke-linejoin='miter' opacity='.55'/%3E%3C/svg%3E");background-repeat:repeat-x;background-position:center}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;background:rgba(11,15,11,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{height:34px;width:auto}
+.brand b{font-family:var(--display);font-weight:800;font-size:23px;letter-spacing:.06em;text-transform:uppercase;line-height:1}
+.brand small{display:block;font-family:var(--display);font-weight:600;font-size:12px;letter-spacing:.24em;color:var(--green)}
+.menu{display:flex;align-items:center;gap:26px;list-style:none}
+.menu a{font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:#D9E2D6}
+.menu a:hover{color:var(--green)}
+.menu .btn{padding:9px 18px;font-size:16px}
+.burger{display:none;background:none;border:0;color:var(--white);width:44px;height:44px;cursor:pointer}
+.burger svg{width:28px;height:28px}
+@media (max-width:900px){
+  .burger{display:grid;place-items:center}
+  .menu{position:fixed;inset:70px 0 auto 0;flex-direction:column;align-items:stretch;gap:0;background:var(--ink);border-bottom:1px solid var(--line);padding:8px 20px 20px;transform:translateY(-120%);transition:transform .25s;z-index:-1}
+  .menu.open{transform:none}
+  .menu li a{display:block;padding:14px 4px;border-bottom:1px solid var(--line);font-size:20px}
+  .menu li:last-child a{margin-top:14px;justify-content:center;border-bottom:0}
+}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:radial-gradient(70% 60% at 85% 20%,rgba(152,232,112,.18),transparent 60%),var(--ink)}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-62deg,transparent 0 86px,rgba(255,255,255,.035) 86px 88px);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding-block:72px 84px}
+.hero h1{font-size:clamp(54px,8.4vw,112px);font-style:italic;margin:18px 0 22px}
+.hero h1 span{display:block}
+.hero p.lead{font-size:20px;color:#D3DCCF;max-width:560px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.hero-photo{position:relative;justify-self:end;width:min(440px,100%)}
+.hero-photo .frame{border-radius:24px;overflow:hidden;border:2px solid var(--line);aspect-ratio:3/4;box-shadow:0 30px 80px -30px rgba(152,232,112,.35)}
+.hero-photo .frame img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;left:-26px;bottom:28px;background:var(--green);color:#0B160B;border-radius:14px;padding:12px 16px;font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:1.05;box-shadow:0 14px 30px -10px rgba(0,0,0,.6);max-width:240px}
+.badge small{display:block;font-weight:700;font-size:13px;letter-spacing:.14em;opacity:.75}
+.badge b{font-size:24px}
+.lanes{position:absolute;right:-6px;top:20px;display:flex;flex-direction:column;gap:6px;font-family:var(--display);font-weight:800;font-size:15px;color:rgba(255,255,255,.25)}
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;padding-block:44px 64px;gap:36px}
+  .hero-photo{justify-self:center}
+  .badge{left:12px}
+}
+
+/* STATS */
+.stats{background:var(--green);color:#0B160B}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:28px 18px;border-right:1px solid rgba(11,22,11,.18)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(40px,5vw,58px);line-height:1;font-variant-numeric:tabular-nums}
+.stat span{display:block;font-weight:600;font-size:15px;line-height:1.35;margin-top:6px}
+@media (max-width:800px){.stats .wrap{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid rgba(11,22,11,.18)}}
+
+/* SECTIONS */
+section.sec{padding-block:96px}
+.sec-head{max-width:760px;margin-bottom:48px}
+.sec-head h2{font-size:clamp(44px,6vw,72px);margin-top:12px}
+.sec-head p{color:var(--muted);font-size:19px;margin-top:16px}
+.light{background:var(--paper);color:#101510}
+.light .sec-head p{color:#4E584B}
+.light .eyebrow{color:var(--green-deep)}
+
+/* CLUB */
+.club{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:start}
+.club .text p{font-size:19px;color:#2A3328;margin-bottom:16px;max-width:62ch}
+.club .text p strong{color:#101510}
+.name-card{background:#101510;color:var(--white);border-radius:var(--r);padding:30px;position:relative;overflow:hidden}
+.name-card::after{content:"";position:absolute;right:-30px;bottom:-30px;width:180px;height:180px;background:url(img/logo-painanis.png) center/contain no-repeat;opacity:.12}
+.name-card h3{font-size:34px;color:var(--green);margin-bottom:12px}
+.name-card p{color:#CBD5C7;font-size:17px;position:relative;z-index:1}
+.name-card .tag{display:inline-block;margin-top:18px;font-family:var(--display);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:14px;color:var(--green)}
+@media (max-width:860px){.club{grid-template-columns:1fr}}
+
+/* COACHES */
+.coaches{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
+.coach-main{display:grid;grid-template-columns:.9fr 1.1fr;background:var(--ink-2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.coach-main .ph{min-height:100%;background:#000}
+.coach-main .ph img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.coach-main .info{padding:32px 30px}
+.coach-main .role{font-family:var(--display);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:14px;color:var(--green)}
+.coach-main h3{font-size:42px;margin:8px 0 18px}
+.creds{list-style:none;display:grid;gap:12px}
+.creds li{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start;color:#D3DCCF;font-size:16.5px;line-height:1.45}
+.creds li svg{width:22px;height:22px;color:var(--green);margin-top:1px}
+.coach-side{display:grid;gap:24px;align-content:start}
+.coach-card{background:var(--ink-2);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:center}
+.mono{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--green),var(--green-deep));color:#0B160B;font-family:var(--display);font-weight:800;font-size:26px}
+.coach-card .role{font-family:var(--display);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:13px;color:var(--green)}
+.coach-card h3{font-size:28px;margin:4px 0 6px}
+.coach-card p{color:var(--muted);font-size:15.5px;line-height:1.45}
+@media (max-width:960px){.coaches{grid-template-columns:1fr}}
+@media (max-width:640px){.coach-main{grid-template-columns:1fr}.coach-main .ph{aspect-ratio:4/3}}
+
+/* TIMELINE */
+.timeline{list-style:none;position:relative;display:grid;gap:22px}
+.timeline::before{content:"";position:absolute;left:94px;top:6px;bottom:6px;width:3px;background:linear-gradient(var(--green),var(--green-deep));border-radius:3px}
+.timeline li{display:grid;grid-template-columns:80px 1fr;gap:38px;align-items:start;position:relative}
+.timeline li::before{content:"";position:absolute;left:87px;top:10px;width:17px;height:17px;border-radius:50%;background:var(--paper);border:4px solid var(--green-deep)}
+.timeline li.big::before{background:var(--green);border-color:#101510;width:21px;height:21px;left:85px;top:8px}
+.timeline .yr{font-family:var(--display);font-weight:800;font-size:30px;line-height:1;color:var(--green-deep);text-align:right}
+.timeline .yr small{display:block;font-size:14px;letter-spacing:.12em;color:#58634F}
+.timeline .ev{background:#fff;border:1px solid #DCE4D6;border-radius:14px;padding:18px 22px}
+.timeline .ev h3{font-size:26px;color:#101510;margin-bottom:6px}
+.timeline .ev p{color:#3D463A;font-size:16.5px;line-height:1.5}
+.timeline li.big .ev{background:#101510;border-color:#101510}
+.timeline li.big .ev h3{color:var(--green)}
+.timeline li.big .ev p{color:#CBD5C7}
+.src{margin-top:26px;font-size:13.5px;color:#66705F}
+@media (max-width:640px){
+  .timeline::before{left:10px}
+  .timeline li{grid-template-columns:1fr;gap:6px;padding-left:36px}
+  .timeline li::before{left:3px}
+  .timeline li.big::before{left:1px}
+  .timeline .yr{text-align:left;font-size:26px}
+  .timeline .yr small{display:inline;margin-left:8px}
+}
+
+/* PROGRAMS */
+.programs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.prog{background:var(--ink-2);border:1px solid var(--line);border-radius:var(--r);padding:28px 26px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}
+.prog .lane{position:absolute;right:18px;top:12px;font-family:var(--display);font-weight:800;font-size:64px;line-height:1;color:rgba(152,232,112,.12)}
+.prog .age{font-family:var(--display);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:14px;color:var(--green)}
+.prog h3{font-size:34px}
+.prog p{color:var(--muted);font-size:16px;line-height:1.5}
+.prog .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
+.prog .chips span{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.06em;padding:4px 12px;border-radius:999px;border:1px solid var(--line);color:#D3DCCF}
+.prog a.more{font-family:var(--display);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:16px;color:var(--green);text-decoration:none;margin-top:6px}
+.prog a.more:hover{text-decoration:underline}
+
+/* GALLERY */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.gallery figure{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:1;background:#000}
+.gallery figure.wide{grid-column:span 2;grid-row:span 2}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gallery figure:hover img{transform:scale(1.04)}
+@media (max-width:760px){.gallery{grid-template-columns:repeat(2,1fr)}.gallery figure.wide{grid-column:span 2;grid-row:auto;aspect-ratio:4/3}}
+
+/* AWARD BAND */
+.award{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:20px;overflow:hidden;background:#101510;color:var(--white)}
+.award .ph img{width:100%;height:100%;object-fit:cover}
+.award .tx{padding:44px 40px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.award h2{font-size:clamp(36px,4.6vw,56px)}
+.award p{color:#CBD5C7;font-size:18px}
+@media (max-width:820px){.award{grid-template-columns:1fr}.award .ph{aspect-ratio:16/10}}
+
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:stretch}
+.cta-box{background:linear-gradient(135deg,#1A2A17,#0F160E);border:1px solid var(--line);border-radius:22px;padding:44px 40px;position:relative;overflow:hidden}
+.cta-box::before{content:"";position:absolute;inset:auto -60px -60px auto;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(152,232,112,.25),transparent 70%)}
+.cta-box h2{font-size:clamp(40px,5vw,64px);margin:12px 0 16px}
+.cta-box p{color:#CBD5C7;font-size:18px;max-width:46ch}
+.cta-box .btn{margin-top:28px}
+.channels{display:grid;gap:14px}
+.ch{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:center;background:var(--ink-2);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;transition:border-color .15s}
+a.ch:hover{border-color:var(--green)}
+.ch .ic{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:rgba(152,232,112,.12);color:var(--green)}
+.ch .ic svg{width:24px;height:24px}
+.ch small{display:block;font-family:var(--display);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:13px;color:var(--muted-2)}
+.ch b{font-weight:600;font-size:17px;overflow-wrap:anywhere}
+@media (max-width:860px){.contact{grid-template-columns:1fr}.cta-box{padding:34px 26px}}
+
+footer{border-top:1px solid var(--line);padding-block:30px;color:var(--muted-2);font-size:14.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer .brand img{height:26px}
+footer a{color:var(--muted)}
+
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.6);text-decoration:none}
+.wa-float svg{width:32px;height:32px}
+.reveal{opacity:1;transform:none;transition:opacity .6s,transform .6s}
+.js .reveal.pre{opacity:0;transform:translateY(18px)}
+
+/* PRIMERA CLASE · INSCRIPCIÓN · FAQ · TESTIMONIOS */
+.first{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.fcard{background:#fff;border:1px solid #DCE4D6;border-radius:var(--r);padding:26px}
+.fcard h3{font-size:30px;margin-bottom:12px;color:#101510}
+.fcard ul{list-style:none;display:grid;gap:10px}
+.fcard li{display:grid;grid-template-columns:24px 1fr;gap:10px;color:#2A3328;font-size:16.5px;line-height:1.45}
+.fcard li svg{width:20px;height:20px;color:var(--green-deep);margin-top:2px}
+.fcard .todo{background:#FFF3C4;color:#6B4E00;border-radius:6px;padding:0 6px;font-weight:600}
+@media (max-width:900px){.first{grid-template-columns:1fr}}
+.join{margin-top:28px;display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;background:#101510;color:var(--white);border-radius:24px;padding:34px;align-items:center}
+.join h3{font-size:40px}
+.join p{color:#CBD5C7;margin-top:10px}
+.join form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.join label{display:grid;gap:6px;font-family:var(--display);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--green)}
+.join input,.join select{font:500 17px var(--body);color:var(--white);background:var(--ink-3);border:1px solid var(--line);border-radius:12px;padding:13px 14px;min-height:50px;width:100%}
+.join input:focus,.join select:focus{outline:2px solid var(--green);outline-offset:1px}
+.join .full{grid-column:1/-1}
+.join button{justify-content:center;cursor:pointer;border:0}
+@media (max-width:900px){.join{grid-template-columns:1fr;padding:26px}.join form{grid-template-columns:1fr}}
+.faq{max-width:860px;margin-top:8px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:64px;font-family:var(--display);font-weight:700;font-size:24px;text-transform:uppercase;letter-spacing:.02em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--green);font-size:34px;transition:transform .2s;flex:none}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--muted);padding:0 0 20px;max-width:70ch}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.quote{background:var(--ink-2);border:1px solid var(--line);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:18px}
+.quote p{font-size:18px;color:#E3EADF;line-height:1.5}
+.quote p::before{content:"“";display:block;font-family:var(--display);font-weight:800;font-size:64px;line-height:.6;color:var(--green)}
+.quote footer{border-top:0;padding:0;font-family:var(--display);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:15px;color:var(--green)}
+.quote footer small{display:block;color:var(--muted);letter-spacing:.06em;font-size:13px}
+@media (max-width:900px){.quotes{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.09c-.24.68-1.41 1.3-1.95 1.36-.5.06-1.13.08-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.66.5.24.58.82 2 .89 2.15.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.03 1.12 1 2.07 1.31 2.36 1.46.29.15.46.12.63-.07.17-.19.73-.85.92-1.14.19-.29.39-.24.65-.15.27.1 1.69.8 1.98.94.29.15.48.22.55.34.07.12.07.7-.17 1.38z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M4 12.5l5 5L20 6.5"/></symbol>
+  <symbol id="i-medal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M7 2l3 6M17 2l-3 6"/><circle cx="12" cy="15" r="6"/><path d="M12 12l.9 1.9 2.1.3-1.5 1.4.4 2.1-1.9-1-1.9 1 .4-2.1-1.5-1.4 2.1-.3z" fill="currentColor" stroke="none"/></g></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M14 8.5V6.8c0-.8.5-1 .9-1H17V2h-3.1C10.6 2 10 4.4 10 6v2.5H7.5V12H10v10h4V12h2.9l.4-3.5H14z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></g></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Painanis Oaxaca, inicio">
+      <img src="img/logo-painanis.png" alt="">
+      <span><b>Painanis</b><small>Oaxaca · Atletismo</small></span>
+    </a>
+    <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="menu" id="menu">
+      <li><a href="#club">El club</a></li>
+      <li><a href="#entrenadores">Entrenadores</a></li>
+      <li><a href="#logros">Logros</a></li>
+      <li><a href="#programas">Programas</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#primera-clase">Primera clase</a></li>
+      <li><a class="btn solid" href="#contacto">Inscríbete</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Club de atletismo · Oaxaca · Desde 2014</p>
+        <h1><span>Formación</span><span>y desarrollo</span><span class="g">atlético</span></h1>
+        <p class="lead">Entrenamiento de pista, ruta y triatlón para niñas, niños, jóvenes y adultos, con el equipo del ex seleccionado nacional Josafat González.</p>
+        <div class="ctas">
+          <a class="btn solid" href="https://wa.me/529513041535?text=Hola%2C%20me%20interesa%20entrenar%20en%20Painanis%20Oaxaca.%20%C2%BFMe%20pueden%20dar%20informes%3F" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Quiero entrenar</a>
+          <a class="btn ghost" href="#logros">Ver logros</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="frame"><img src="img/hero.jpg" alt="Cuatro atletas de Painanis Oaxaca con sus medallas en una competencia nacional" width="1200" height="1600"></div>
+        <div class="badge"><small>Desde 2014</small><b>+10 años</b><br>formando atletas</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats" aria-label="El club en números">
+    <div class="wrap">
+      <div class="stat"><b>2014</b><span>año en que nació el club</span></div>
+      <div class="stat"><b>200+</b><span>atletas en el festival de nuestro 10º aniversario</span></div>
+      <div class="stat"><b>12</b><span>plazas a la fase nacional de la Olimpiada Nacional 2026</span></div>
+      <div class="stat"><b>6+</b><span>años: la edad desde la que puedes empezar</span></div>
+    </div>
+  </section>
+
+  <!-- CLUB -->
+  <section class="sec light" id="club">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">El club</p>
+        <h2>Somos Painanis</h2>
+      </div>
+      <div class="club">
+        <div class="text reveal">
+          <p><strong>Somos un equipo de entrenadores profesionales, comprometidos en la formación y desarrollo de atletas destacados en el ámbito estatal y nacional.</strong></p>
+          <p>Elaboramos programas de entrenamiento personalizados que potencien tus capacidades, desde la iniciación infantil hasta la preparación para Juegos Escolares, Nacionales CONADE y Universiada.</p>
+          <p>Creemos que el atletismo se desarrolla a través de la competencia. Por eso organizamos festivales y llevamos a nuestros atletas a competir, con la meta de formar una nueva generación que represente a Oaxaca dentro y fuera del país.</p>
+        </div>
+        <aside class="name-card reveal">
+          <h3>¿Por qué “Painanis”?</h3>
+          <p>En el México antiguo, los painanis eran corredores mensajeros que llevaban noticias de un pueblo a otro, a pie y a gran distancia. Llevamos su nombre porque eso buscamos en cada atleta: constancia, resistencia y orgullo por su tierra.</p>
+          <span class="tag">#PainanisOax</span>
+        </aside>
+      </div>
+    </div>
+  </section>
+  <div class="greca" aria-hidden="true"></div>
+
+  <!-- COACHES -->
+  <section class="sec" id="entrenadores">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Entrenadores</p>
+        <h2>Experiencia que se nota en la pista</h2>
+        <p>Un cuerpo técnico que compitió al más alto nivel y hoy forma a la siguiente generación de atletas oaxaqueños.</p>
+      </div>
+      <div class="coaches">
+        <article class="coach-main reveal">
+          <div class="ph"><img src="img/josafat-premio.jpg" alt="Josafat González Martínez con el Premio Estatal al Mérito Deportivo 2026" loading="lazy"></div>
+          <div class="info">
+            <p class="role">Fundador y entrenador principal</p>
+            <h3>LED. Josafat González Martínez</h3>
+            <ul class="creds">
+              <li><svg><use href="#i-medal"/></svg>Ex seleccionado nacional y medallista de Juegos Centroamericanos y del Caribe.</li>
+              <li><svg><use href="#i-check"/></svg>Compitió en la Universiada Mundial de Bangkok 2007.</li>
+              <li><svg><use href="#i-medal"/></svg>Premio Estatal al Mérito Deportivo 2026, otorgado por el H. Congreso del Estado de Oaxaca.</li>
+              <li><svg><use href="#i-check"/></svg>Más de 10 años al frente de Painanis, con medallistas en Nacionales CONADE.</li>
+            </ul>
+          </div>
+        </article>
+        <div class="coach-side">
+          <article class="coach-card reveal">
+            <div class="mono" aria-hidden="true">ZG</div>
+            <div>
+              <p class="role">Entrenadora · Triatlón</p>
+              <h3>Zelma González Jarquín</h3>
+              <p>Prepara a los triatletas del club en duatlón y acuatlón rumbo a los clasificatorios nacionales.</p>
+            </div>
+          </article>
+          <article class="coach-card reveal">
+            <div class="mono" aria-hidden="true">JA</div>
+            <div>
+              <p class="role">Entrenador auxiliar</p>
+              <h3>Jasson Alonso Navarro</h3>
+              <p>Acompaña la preparación diaria de los atletas de pista.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARD -->
+  <section class="sec" style="padding-top:0">
+    <div class="wrap">
+      <div class="award reveal">
+        <div class="ph"><img src="img/congreso.jpg" alt="Entrega del Premio Estatal al Mérito Deportivo 2026 en el Congreso del Estado de Oaxaca" loading="lazy"></div>
+        <div class="tx">
+          <p class="eyebrow">Septiembre 2026</p>
+          <h2>Premio Estatal al <span class="g">Mérito Deportivo</span></h2>
+          <p>El H. Congreso del Estado de Oaxaca reconoció a nuestro entrenador principal, Josafat González, por su trayectoria y su trabajo en el desarrollo del atletismo oaxaqueño.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGROS -->
+  <section class="sec light" id="logros">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Logros</p>
+        <h2>Resultados que hablan</h2>
+        <p>Algunos de los momentos más importantes del club en los últimos años.</p>
+      </div>
+      <ol class="timeline">
+        <li class="reveal"><div class="yr">2022</div><div class="ev"><h3>Dos medallistas nacionales</h3><p>Dos atletas del club suben al podio en los Nacionales CONADE.</p></div></li>
+        <li class="reveal"><div class="yr">2023</div><div class="ev"><h3>Tres medallistas nacionales</h3><p>Tres atletas en el podio de los Nacionales CONADE, entre ellos Zarek Elías García con bronce en 2,000 m sub-16.</p></div></li>
+        <li class="reveal"><div class="yr">2024</div><div class="ev"><h3>10º aniversario</h3><p>Festival atlético con más de 200 atletas, desde los 6 años hasta categoría libre, en el óvalo del Polideportivo Venustiano Carranza.</p></div></li>
+        <li class="reveal"><div class="yr">2025</div><div class="ev"><h3>Plata en la Olimpiada Nacional</h3><p>Zarek Elías García Jerónimo, medalla de plata en 1,500 m sub-18 en la Etapa Final de la Olimpiada Nacional.</p></div></li>
+        <li class="reveal"><div class="yr">2026<small>Marzo</small></div><div class="ev"><h3>12 plazas a la fase nacional</h3><p>Nueve atletas de pista y tres de triatlón clasifican desde la Etapa Estatal rumbo a la Olimpiada Nacional 2026.</p></div></li>
+        <li class="reveal big"><div class="yr">2026<small>Julio</small></div><div class="ev"><h3>Plata internacional</h3><p>Zarek Elías García Jerónimo gana plata en 1,500 m en el Campeonato Norte, Centroamericano y del Caribe (NACAC) sub-18: su primera medalla internacional.</p></div></li>
+        <li class="reveal big"><div class="yr">2026<small>Sept.</small></div><div class="ev"><h3>Mérito Deportivo</h3><p>Josafat González recibe el Premio Estatal al Mérito Deportivo del H. Congreso del Estado de Oaxaca.</p></div></li>
+      </ol>
+      <p class="src">Fuentes: publicaciones del club y notas de NVI Noticias y El Imparcial de Oaxaca.</p>
+    </div>
+  </section>
+
+  <!-- PROGRAMAS -->
+  <section class="sec" id="programas">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Programas</p>
+        <h2>Un lugar en la pista para cada edad</h2>
+        <p>Entrenamos por categorías y con planes personalizados. Escríbenos para conocer horarios, sede y cuotas.</p>
+      </div>
+      <div class="programs">
+        <article class="prog reveal"><span class="lane" aria-hidden="true">1</span><p class="age">Desde 6 años</p><h3>Infantil</h3><p>Iniciación al atletismo con juegos, técnica de carrera y velocidad. La base para competir con confianza.</p><div class="chips"><span>80 m</span><span>100 m</span><span>150 m</span><span>300 m</span></div><a class="more" href="#contacto">Pedir informes →</a></article>
+        <article class="prog reveal"><span class="lane" aria-hidden="true">2</span><p class="age">Sub-16 a Sub-20</p><h3>Juvenil</h3><p>Velocidad y medio fondo con preparación rumbo a Juegos Escolares, Olimpiada Nacional y Nacionales CONADE.</p><div class="chips"><span>600 m</span><span>800 m</span><span>1,500 m</span><span>Campo traviesa</span></div><a class="more" href="#contacto">Pedir informes →</a></article>
+        <article class="prog reveal"><span class="lane" aria-hidden="true">3</span><p class="age">Universitarios y libre</p><h3>Pista y ruta</h3><p>Entrenamiento para universitarios rumbo a Universiada y para corredores de ruta que quieren mejorar sus marcas.</p><div class="chips"><span>400 m</span><span>Milla</span><span>Ruta</span></div><a class="more" href="#contacto">Pedir informes →</a></article>
+        <article class="prog reveal"><span class="lane" aria-hidden="true">4</span><p class="age">Con Zelma González</p><h3>Triatlón</h3><p>Preparación en las modalidades de duatlón (carrera y ciclismo) y acuatlón (carrera y natación).</p><div class="chips"><span>Duatlón</span><span>Acuatlón</span></div><a class="more" href="#contacto">Pedir informes →</a></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="sec" id="galeria" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Galería</p>
+        <h2>Así se vive Painanis</h2>
+      </div>
+      <div class="gallery">
+        <figure class="reveal"><img src="img/galeria-2.jpg" alt="Atletas de Painanis en el podio de una carrera" loading="lazy"></figure>
+        <figure class="reveal"><img src="img/galeria-3.jpg" alt="Equipo Painanis con sus uniformes verdes" loading="lazy"></figure>
+        <figure class="reveal"><img src="img/galeria-1.jpg" alt="Atleta del club en el primer lugar del podio" loading="lazy"></figure>
+        <figure class="reveal"><img src="img/galeria-7.jpg" alt="Podio en Santa Cruz Xoxocotlán" loading="lazy"></figure>
+        <figure class="reveal"><img src="img/galeria-6.jpg" alt="Grupo de atletas del club al aire libre" loading="lazy"></figure>
+        <figure class="reveal"><img src="img/galeria-4.jpg" alt="Premiación de una carrera" loading="lazy"></figure>
+        <figure class="reveal"><img src="img/galeria-8.jpg" alt="Atletas premiados en una carrera atlética" loading="lazy"></figure>
+        <figure class="reveal"><img src="img/galeria-5.jpg" alt="Atleta del club en el podio" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+  <div class="greca" aria-hidden="true"></div>
+
+  <!-- CONTACTO -->
+
+  <!-- ===== NUEVO: Testimonios. SUSTITUIR por frases reales (con permiso) ===== -->
+  <section class="sec" id="testimonios" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Testimonios</p>
+        <h2>Lo que dicen <span class="g">las familias</span></h2>
+      </div>
+      <div class="quotes">
+        <figure class="quote reveal"><p>[CONFIRMAR: frase real de un papá o mamá. Ej. qué cambió en su hijo desde que entrena aquí.]</p><footer>[Nombre]<small>Mamá de atleta infantil</small></footer></figure>
+        <figure class="quote reveal"><p>[CONFIRMAR: frase real de un atleta juvenil sobre su primera competencia o su marca personal.]</p><footer>[Nombre]<small>Atleta juvenil</small></footer></figure>
+        <figure class="quote reveal"><p>[CONFIRMAR: tu propia experiencia entrenando en Painanis.]</p><footer>Luis<small>Atleta de pista y ruta</small></footer></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NUEVO: Primera clase + inscripción + preguntas ===== -->
+  <section class="sec light" id="primera-clase">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Tu primera clase</p>
+        <h2>Llega, calienta <span style="color:var(--green-deep)">y corre</span></h2>
+        <p>No necesitas experiencia. Esto es todo lo que necesitas saber para tu primer entrenamiento.</p>
+      </div>
+      <div class="first">
+        <div class="fcard reveal"><h3>Dónde y cuándo</h3><ul>
+          <li><svg><use href="#i-check"/></svg><span><b>Sede:</b> <span class="todo">[CONFIRMAR: nombre de la pista o unidad deportiva]</span></span></li>
+          <li><svg><use href="#i-check"/></svg><span><b>Infantil:</b> <span class="todo">[CONFIRMAR: días y hora]</span></span></li>
+          <li><svg><use href="#i-check"/></svg><span><b>Juvenil y libre:</b> <span class="todo">[CONFIRMAR: días y hora]</span></span></li>
+        </ul></div>
+        <div class="fcard reveal"><h3>Qué llevar</h3><ul>
+          <li><svg><use href="#i-check"/></svg><span>Tenis para correr y ropa deportiva cómoda.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Botella con agua.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Gorra y bloqueador si entrenas de día.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Llega 10 minutos antes para presentarte con el entrenador.</span></li>
+        </ul></div>
+        <div class="fcard reveal"><h3>Cómo empezar</h3><ul>
+          <li><svg><use href="#i-check"/></svg><span>Escríbenos por WhatsApp con la edad del atleta.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Te decimos qué grupo le toca y a qué hora llegar.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>El entrenador evalúa su nivel y arma su plan.</span></li>
+        </ul></div>
+      </div>
+
+      <div class="join reveal">
+        <div><p class="eyebrow">Inscripción</p><h3>Aparta tu lugar</h3><p>Llena estos datos y se abre WhatsApp con tu mensaje listo. No se guarda nada en esta página.</p></div>
+        <form id="joinForm" novalidate>
+          <label>Nombre del atleta<input id="jName" autocomplete="name" placeholder="Ej. Sofía"></label>
+          <label>Edad<input id="jAge" inputmode="numeric" placeholder="Ej. 11"></label>
+          <label class="full">Programa<select id="jProg"><option>Infantil</option><option>Juvenil</option><option>Pista y ruta</option><option>Triatlón</option><option>No sé, quiero que me orienten</option></select></label>
+          <button class="btn solid full" type="submit"><svg><use href="#i-wa"/></svg>Enviar por WhatsApp</button>
+        </form>
+      </div>
+
+      <div class="sec-head reveal" style="margin:72px 0 8px"><p class="eyebrow">Preguntas frecuentes</p><h2 style="font-size:clamp(38px,5vw,56px)">Lo que más nos preguntan</h2></div>
+      <div class="faq" style="--line:#DCE4D6;--muted:#4E584B">
+        <details><summary>¿Desde qué edad pueden entrenar?</summary><p>Desde los 6 años en el grupo infantil, con juegos y técnica de carrera. También hay grupos juveniles, universitarios y libre para adultos.</p></details>
+        <details><summary>¿Necesito experiencia?</summary><p>No. El entrenador evalúa a cada atleta en su primera clase y lo integra al grupo y al plan que le corresponde.</p></details>
+        <details><summary>¿Hay clase de prueba?</summary><p>[CONFIRMAR con el profe Josafat] Escríbenos y te decimos cómo funciona.</p></details>
+        <details><summary>¿Cuánto cuesta?</summary><p>Las cuotas dependen de la categoría y la temporada. Escríbenos por WhatsApp y te las compartimos al momento.</p></details>
+        <details><summary>¿Van a competencias?</summary><p>Sí. Los atletas se preparan rumbo a Juegos Escolares, Olimpiada Nacional, Nacionales CONADE, Universiada y carreras de ruta.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="contacto">
+    <div class="wrap contact">
+      <div class="cta-box reveal">
+        <p class="eyebrow">Inscripciones</p>
+        <h2>Tu primer entrenamiento empieza con un mensaje</h2>
+        <p>Cuéntanos la edad del atleta y qué le gustaría lograr. Te compartimos horarios, sede y cuotas de la temporada.</p>
+        <a class="btn solid" href="https://wa.me/529513041535?text=Hola%2C%20me%20interesa%20entrenar%20en%20Painanis%20Oaxaca.%20%C2%BFMe%20pueden%20dar%20informes%3F" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Escribir por WhatsApp</a>
+      </div>
+      <div class="channels">
+        <a class="ch reveal" href="https://wa.me/529513041535" target="_blank" rel="noopener"><span class="ic"><svg><use href="#i-wa"/></svg></span><span><small>WhatsApp</small><b>951 304 1535</b></span></a>
+        <a class="ch reveal" href="mailto:josafatgm08@hotmail.com"><span class="ic"><svg><use href="#i-mail"/></svg></span><span><small>Correo</small><b>josafatgm08@hotmail.com</b></span></a>
+        <a class="ch reveal" href="https://www.facebook.com/PainanisOaxaca/" target="_blank" rel="noopener"><span class="ic"><svg><use href="#i-fb"/></svg></span><span><small>Facebook · 3.9 mil seguidores</small><b>Painanis - Oaxaca</b></span></a>
+        <a class="ch reveal" href="https://www.instagram.com/atletismo_painanis_oax_/" target="_blank" rel="noopener"><span class="ic"><svg><use href="#i-ig"/></svg></span><span><small>Instagram</small><b>@atletismo_painanis_oax_</b></span></a>
+        <div class="ch reveal"><span class="ic"><svg><use href="#i-pin"/></svg></span><span><small>Ubicación</small><b>Oaxaca de Juárez, Oaxaca</b></span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#inicio"><img src="img/logo-painanis.png" alt=""><span><b style="font-size:19px">Painanis Oaxaca</b><small>Formación y desarrollo atlético</small></span></a>
+    <p>© 2026 Club de Atletismo Painanis Oaxaca · Propuesta de sitio web por <a href="https://www.instagram.com/nexoindigital/" target="_blank" rel="noopener">Nexo Digital</a></p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/529513041535?text=Hola%2C%20me%20interesa%20entrenar%20en%20Painanis%20Oaxaca.%20%C2%BFMe%20pueden%20dar%20informes%3F" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+document.documentElement.classList.add('js');
+const burger=document.querySelector('.burger'), menu=document.getElementById('menu');
+burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded','false')}));
+if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+  const els=[...document.querySelectorAll('.reveal')];
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(el=>{const r=el.getBoundingClientRect(); if(r.top>innerHeight){el.classList.add('pre');io.observe(el)}});
+}
+
+document.getElementById('joinForm')?.addEventListener('submit',e=>{e.preventDefault();
+  const n=document.getElementById('jName').value.trim(),a=document.getElementById('jAge').value.trim(),p=document.getElementById('jProg').value;
+  const msg='Hola, quiero inscribir'+(n?' a '+n:'')+(a?' ('+a+' años)':'')+' en Painanis. Programa: '+p+'. ¿Me comparten horario, sede y cuota?';
+  window.open('https://wa.me/529513041535?text='+encodeURIComponent(msg),'_blank','noopener');});
+</script>
+</body>
+</html>
